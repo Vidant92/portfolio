@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#FAF7F2" />
+  <defs>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#14171C" fill-opacity="0.08" />
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#dots)" />
+  <rect x="80" y="70" width="150" height="34" rx="17" fill="#FFE4DB" />
+  <text x="100" y="93" font-family="'IBM Plex Mono', monospace" font-size="14" fill="#E8431F">ENTRY 01</text>
+  <text x="80" y="290" font-family="Georgia, 'Times New Roman', serif" font-weight="600" font-size="96" fill="#14171C">Vidant</text>
+  <text x="80" y="400" font-family="Georgia, 'Times New Roman', serif" font-weight="600" font-size="96" fill="#14171C">Bhardwaj</text>
+  <text x="80" y="460" font-family="'IBM Plex Mono', monospace" font-size="22" fill="#5B6169">Final Year B.Tech Computer Science Student</text>
+  <line x1="80" y1="510" x2="1120" y2="510" stroke="#E4DFD4" stroke-width="1" />
+  <text x="80" y="560" font-family="'IBM Plex Mono', monospace" font-size="18" fill="#5B6169">github.com/Vidant92 · leetcode.com/u/vidant</text>
+</svg>

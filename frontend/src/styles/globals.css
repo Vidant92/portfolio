@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper text-ink font-body antialiased;
+}
+
+::selection {
+  background: rgba(255, 90, 54, 0.18);
+  color: #14171c;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d9cfbe;
+  border-radius: 999px;
+  border: 2px solid #faf7f2;
+}
+
+:focus-visible {
+  outline: 2px solid #ff5a36;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.skip-link {
+  @apply fixed left-4 top-4 z-[999] -translate-y-24 rounded-full bg-ink px-5 py-2.5 font-mono text-xs text-paper transition-transform focus:translate-y-0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer components {
+  .shell {
+    @apply relative mx-auto w-full max-w-6xl px-6 sm:px-8 lg:px-10;
+  }
+
+  .section-pad {
+    @apply py-20 sm:py-28 lg:py-32;
+  }
+
+  .log-label {
+    @apply inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-ink-muted;
+  }
+
+  .log-label::before {
+    content: "";
+    @apply h-[6px] w-[6px] rounded-full bg-accent;
+  }
+
+  .heading-display {
+    @apply font-display font-semibold tracking-tight text-ink;
+  }
+
+  .card {
+    @apply rounded-[20px] border border-line bg-paper-raised shadow-card transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-1 hover:shadow-cardHover;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-ink px-7 py-3.5 font-body text-sm font-semibold text-paper transition-all duration-300 hover:bg-accent hover:shadow-glowAccent active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink/15 bg-transparent px-7 py-3.5 font-body text-sm font-semibold text-ink transition-all duration-300 hover:border-ink hover:-translate-y-0.5 active:scale-[0.98];
+  }
+
+  .chip {
+    @apply rounded-full border border-line bg-paper px-3 py-1 font-mono text-[11px] text-ink-muted;
+  }
+
+  .accent-underline {
+    background-image: linear-gradient(#ffe4db, #ffe4db);
+    background-repeat: no-repeat;
+    background-size: 100% 0.35em;
+    background-position: 0 88%;
+  }
+
+  .dot-field {
+    @apply bg-dot-texture bg-dots;
+  }
+
+  .skeleton {
+    @apply relative overflow-hidden bg-line/60;
+  }
+
+  .skeleton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.7) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.8s infinite linear;
+  }
+
+  .placeholder-frame {
+    @apply relative flex h-full w-full flex-col items-center justify-center gap-2 overflow-hidden rounded-[inherit] border border-dashed border-ink/20 bg-paper text-center;
+  }
+}
